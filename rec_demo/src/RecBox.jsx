@@ -9,7 +9,7 @@ import './RecBox.css'
 
 
 function RecBox() {
-  const [title, setTitle] = useState('');
+  //const [title, setTitle] = useState('');
   return (
     <div id='outer-rec-box'>
       <h2 className='pixel-font'>Use Something Old to Find Something New!</h2>
@@ -26,7 +26,7 @@ function RecBox() {
         <option value="book">Book</option>
         <option value="game">Game</option>
       </select>
-      <button id='find-button' onClick={handleClick}>Find!</button>
+      {/*<button id='find-button' onClick={handleClick}>Find!</button>*/}
     </div>
     </div>
   )
