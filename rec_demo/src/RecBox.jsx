@@ -2,17 +2,22 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
-import './App.css'
+import './RecBox.css'
+
+
+
+
 
 function RecBox() {
+  const [title, setTitle] = useState('');
   return (
     <div id='outer-rec-box'>
-      <h2>Use Something Old to Find Something New!</h2>
-      <h4>Enter the name of a movie, show, podcast, book, or game that you like and select what type of media it is. Click find to get some recs!</h4>
+      <h2 className='pixel-font'>Use Something Old to Find Something New!</h2>
+      <h4 className='pixel-font'>Enter the name of a movie, show, podcast, book, or game that you like and select what type of media it is. Click find to get some recs!</h4>
     <div id='inner-rec-box'>
       <input type='text' id='item-name' placeholder='Enter the name here:' />
 
-      <label for="item-type">Choose media type:</label>
+      <label for="item-type" className='pixel-font'>Choose media type:</label>
       <select name="item-type" id="item-type">
         <option value="">-- Please select an option --</option>
         <option value="movie">Movie</option>
@@ -21,6 +26,7 @@ function RecBox() {
         <option value="book">Book</option>
         <option value="game">Game</option>
       </select>
+      <button id='find-button' onClick={handleClick}>Find!</button>
     </div>
     </div>
   )
